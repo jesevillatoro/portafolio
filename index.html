@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Jesé Villatoro - Desarrollador Web</title>
+  <!-- Tailwind CSS vía CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Archivo de estilos personalizado -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- NAVBAR: Barra de navegación fija -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="text-xl font-bold text-blue-600">Jesé Villatoro</div>
+      <ul class="flex space-x-6">
+        <li><a href="#about" class="text-gray-700 hover:text-blue-600 transition">Sobre Mí</a></li>
+        <li><a href="#projects" class="text-gray-700 hover:text-blue-600 transition">Proyectos</a></li>
+        <li><a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pt-20">
+    <!-- SECCIÓN HERO: Imagen de fondo o gradiente con mensaje de bienvenida -->
+    <section class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20">
+      <div class="container mx-auto text-center">
+        <h1 class="text-4xl font-bold mb-4">Hola, soy Jesé Villatoro</h1>
+        <p class="text-xl mb-8">Desarrollador Web | Soluciones Creativas y Eficientes</p>
+        <a href="#projects" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition">
+          Ver Proyectos
+        </a>
+      </div>
+    </section>
+    
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section id="about" class="container mx-auto py-16 px-4">
+      <h2 class="text-3xl font-semibold text-center mb-6">Sobre Mí</h2>
+      <div class="max-w-3xl mx-auto">
+        <p class="text-lg leading-relaxed">
+          Soy un apasionado por la programación, en constante búsqueda de aprender y superar desafíos. Con estudios en Ingeniería en Sistemas (19 materias aprobadas en la Universidad Gerardo Barrios) y certificaciones en Udemy, desarrollo soluciones web innovadoras y profesionales que se adaptan a las necesidades del mercado.
+        </p>
+      </div>
+    </section>
+    
+    <!-- SECCIÓN PROYECTOS -->
+    <section id="projects" class="bg-gray-100 py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-semibold text-center mb-10">Proyectos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Ejemplo de tarjeta de proyecto -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="ruta-del-proyecto.jpg" alt="Proyecto 1" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Proyecto 1</h3>
+              <p class="text-gray-700 mb-4">
+                Breve descripción del proyecto, resaltando tecnologías utilizadas y objetivos cumplidos.
+              </p>
+              <a href="#" class="text-blue-600 font-semibold hover:underline">Ver más detalles</a>
+            </div>
+          </div>
+          <!-- Puedes duplicar el bloque anterior para otros proyectos -->
+        </div>
+      </div>
+    </section>
+    
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contact" class="container mx-auto py-16 px-4">
+      <h2 class="text-3xl font-semibold text-center mb-10">Contacto</h2>
+      <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <form id="contactForm">
+          <div class="mb-6">
+            <label for="nombre" class="block text-gray-700 font-medium mb-2">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Tu nombre">
+          </div>
+          <div class="mb-6">
+            <label for="telefono" class="block text-gray-700 font-medium mb-2">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Tu teléfono">
+          </div>
+          <div class="mb-6">
+            <label for="direccion" class="block text-gray-700 font-medium mb-2">Correo(opcional)</label>
+            <input type="text" id="direccion" name="direccion" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Tu dirección">
+          </div>
+          <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded font-medium transition hover:bg-blue-700">
+            Enviar Mensaje
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <!-- PIE DE PÁGINA -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Jesé Villatoro. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  
+  <!-- Archivo JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
