@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arte Psicodélico</title>
+  <!-- Importar p5.js -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+</head>
+<body>
+  <script>
+    function setup() {
+      createCanvas(windowWidth, windowHeight);
+      background(0);
+      angleMode(DEGREES);
+      noLoop();
+    }
+
+    function draw() {
+      const numSpirals = 12;
+      translate(width / 2, height / 2);
+      for (let i = 0; i < numSpirals; i++) {
+        push();
+        rotate(i * (360 / numSpirals));
+        drawSpiral(80, 5, 59, 4);
+        pop();
+      }
+    }
+
+    function drawSpiral(numLoops, initialLength, angle, increment) {
+      let length = initialLength;
+      for (let i = 0; i < numLoops; i++) {
+        stroke(random(255), random(255), random(255));
+        line(0, 0, length, 0);
+        translate(length, 0);
+        rotate(angle);
+        length += increment;
+      }
+    }
+
+    function windowResized() {
+      resizeCanvas(windowWidth, windowHeight);
+      background(0);
+      redraw();
+    }
+  </script>
+</body>
+</html>

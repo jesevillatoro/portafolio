@@ -2,8 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <!-- Metaetiquetas para responsividad, SEO y descripción -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio personal de Jesé Villatoro. Desarrollador Web apasionado por crear soluciones creativas y eficientes.">
   <title>Portafolio de Jesé Villatoro - Desarrollador Web</title>
+  <!-- Favicon (opcional) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- Tailwind CSS vía CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Archivo de estilos personalizado -->
@@ -12,92 +16,160 @@
 <body class="bg-gray-50 text-gray-800">
   <!-- NAVBAR: Barra de navegación fija -->
   <header class="bg-white shadow-md fixed w-full z-50">
-    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6" role="navigation" aria-label="Principal">
       <div class="text-xl font-bold text-blue-600">Jesé Villatoro</div>
       <ul class="flex space-x-6">
-        <li><a href="#about" class="text-gray-700 hover:text-blue-600 transition">Sobre Mí</a></li>
-        <li><a href="#projects" class="text-gray-700 hover:text-blue-600 transition">Proyectos</a></li>
-        <li><a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contacto</a></li>
+        <li><a href="#about" class="text-gray-700 hover:text-blue-600 transition" aria-label="Ir a Sobre Mí">Sobre Mí</a></li>
+        <li><a href="#projects" class="text-gray-700 hover:text-blue-600 transition" aria-label="Ir a Proyectos">Proyectos</a></li>
+        <li><a href="#contact" class="text-gray-700 hover:text-blue-600 transition" aria-label="Ir a Contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="pt-20">
-    <!-- SECCIÓN HERO: Imagen de fondo o gradiente con mensaje de bienvenida -->
+    <!-- SECCIÓN HERO -->
     <section class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20">
       <div class="container mx-auto text-center">
         <h1 class="text-4xl font-bold mb-4">Hola, soy Jesé Villatoro</h1>
         <p class="text-xl mb-8">Desarrollador Web | Soluciones Creativas y Eficientes</p>
-        <a href="#projects" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition">
+        <a href="#projects" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition" aria-label="Ver Proyectos">
           Ver Proyectos
         </a>
       </div>
     </section>
-    
+
     <!-- SECCIÓN SOBRE MÍ -->
-    <section id="about" class="container mx-auto py-16 px-4">
-      <h2 class="text-3xl font-semibold text-center mb-6">Sobre Mí</h2>
-      <div class="max-w-3xl mx-auto">
+    <section id="about" class="container mx-auto py-16 px-4 flex flex-col md:flex-row items-center">
+      <div class="w-40 h-40 mb-6 md:mb-0 md:mr-8">
+        <img src="fotojese.jpg" alt="Foto de Jesé Villatoro" class="w-full h-full object-cover rounded-full shadow-lg">
+      </div>
+      <div class="max-w-3xl">
+        <h2 class="text-3xl font-semibold text-center md:text-left mb-6">Sobre Mí</h2>
         <p class="text-lg leading-relaxed">
-          Soy un apasionado por la programación, en constante búsqueda de aprender y superar desafíos. Con estudios en Ingeniería en Sistemas (19 materias aprobadas en la Universidad Gerardo Barrios) y certificaciones en Udemy, desarrollo soluciones web innovadoras y profesionales que se adaptan a las necesidades del mercado.
+          Soy un apasionado por la programación, en constante búsqueda de aprender y superar desafíos. Con estudios en Ingeniería en Sistemas (19 materias aprobadas en la Universidad Gerardo Barrios) y certificaciones en Udemy, desarrollo soluciones web innovadoras y profesionales que se adapten a las necesidades del mercado.
         </p>
       </div>
     </section>
-    
+
     <!-- SECCIÓN PROYECTOS -->
     <section id="projects" class="bg-gray-100 py-16">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-semibold text-center mb-10">Proyectos</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Ejemplo de tarjeta de proyecto -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img src="ruta-del-proyecto.jpg" alt="Proyecto 1" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Proyecto 1</h3>
-              <p class="text-gray-700 mb-4">
-                Breve descripción del proyecto, resaltando tecnologías utilizadas y objetivos cumplidos.
-              </p>
-              <a href="#" class="text-blue-600 font-semibold hover:underline">Ver más detalles</a>
+        <h2 class="text-3xl font-semibold text-center mb-10">Proyectos Destacados</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <!-- Proyecto Avanzado -->
+          <article class="bg-white rounded-lg shadow-lg overflow-hidden group">
+            <div class="relative">
+              <img src="ruta-proyecto-avanzado.jpg" alt="Proyecto Avanzado" class="w-full h-48 object-cover group-hover:scale-105 transform transition duration-300">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                <a href="https://demo-proyecto.com" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded mr-2">Live Demo</a>
+                <a href="https://github.com/jesev/proyecto-avanzado" target="_blank" class="bg-gray-800 text-white px-4 py-2 rounded">Código</a>
+              </div>
             </div>
-          </div>
-          <!-- Puedes duplicar el bloque anterior para otros proyectos -->
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Proyecto Avanzado</h3>
+              <p class="text-gray-700 mb-4">Aplicación web full-stack con funcionalidades en tiempo real, roles de usuario y despliegue continuo.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">React</span>
+                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Node.js</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">MongoDB</span>
+                <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">Tailwind CSS</span>
+              </div>
+              <button onclick="toggleDetails('project-details')" class="text-blue-600 font-semibold hover:underline">Mostrar detalles</button>
+              <div id="project-details" class="mt-4 hidden">
+                <ul class="list-disc list-inside text-gray-700">
+                  <li>WebSockets para actualizaciones en tiempo real.</li>
+                  <li>Autenticación con JWT y autorización por roles.</li>
+                  <li>Despliegue en AWS con CI/CD (GitHub Actions).</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto de Complejidad Media 1 -->
+          <article class="bg-white rounded-lg shadow-lg overflow-hidden group">
+            <img src="ruta-proyecto-medio1.jpg" alt="Proyecto Medio 1" class="w-full h-48 object-cover group-hover:scale-105 transform transition duration-300">
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Proyecto Medio 1</h3>
+              <p class="text-gray-700 mb-4">Aplicación SPA con CRUD completo, diseño responsivo y consumo de API externa.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">Vue.js</span>
+                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Firebase</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">Tailwind CSS</span>
+              </div>
+              <div class="flex space-x-4">
+                <a href="https://demo-proyecto-medio1.com" target="_blank" class="text-blue-600 font-semibold hover:underline">Live Demo</a>
+                <a href="https://github.com/jesev/proyecto-medio1" target="_blank" class="text-blue-600 font-semibold hover:underline">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto de Complejidad Media 2 -->
+          <article class="bg-white rounded-lg shadow-lg overflow-hidden group">
+            <img src="ruta-proyecto-medio2.jpg" alt="Proyecto Medio 2" class="w-full h-48 object-cover group-hover:scale-105 transform transition duration-300">
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Proyecto Medio 2</h3>
+              <p class="text-gray-700 mb-4">Dashboard interactivo con gráficos dinámicos y filtros personalizados.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded">D3.js</span>
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">TypeScript</span>
+                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Chart.js</span>
+              </div>
+              <div class="flex space-x-4">
+                <a href="https://demo-proyecto-medio2.com" target="_blank" class="text-blue-600 font-semibold hover:underline">Live Demo</a>
+                <a href="https://github.com/jesev/proyecto-medio2" target="_blank" class="text-blue-600 font-semibold hover:underline">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto Simple -->
+          <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="ruta-proyecto-simple.jpg" alt="Proyecto Simple" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Proyecto Simple</h3>
+              <p class="text-gray-700 mb-4">Pequeña utilidad web con animaciones CSS y efectos de transición.</p>
+              <a href="proyecto-simple.html" class="text-blue-600 font-semibold hover:underline">Ver más detalles</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
-    
+
     <!-- SECCIÓN CONTACTO -->
     <section id="contact" class="container mx-auto py-16 px-4">
       <h2 class="text-3xl font-semibold text-center mb-10">Contacto</h2>
       <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-        <form id="contactForm">
+        <form id="contactForm" aria-label="Formulario de Contacto">
           <div class="mb-6">
             <label for="nombre" class="block text-gray-700 font-medium mb-2">Nombre</label>
-            <input type="text" id="nombre" name="nombre" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Tu nombre">
+            <input type="text" id="nombre" name="nombre" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Tu nombre" required>
           </div>
           <div class="mb-6">
             <label for="telefono" class="block text-gray-700 font-medium mb-2">Teléfono</label>
             <input type="tel" id="telefono" name="telefono" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Tu teléfono">
           </div>
           <div class="mb-6">
-            <label for="direccion" class="block text-gray-700 font-medium mb-2">Correo(opcional)</label>
-            <input type="text" id="direccion" name="direccion" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Tu dirección">
+            <label for="correo" class="block text-gray-700 font-medium mb-2">Correo (opcional)</label>
+            <input type="email" id="correo" name="correo" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Tu correo electrónico">
           </div>
-          <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded font-medium transition hover:bg-blue-700">
-            Enviar Mensaje
-          </button>
+          <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded font-medium transition hover:bg-blue-700">Enviar Mensaje</button>
         </form>
       </div>
     </section>
   </main>
-  
+
   <!-- PIE DE PÁGINA -->
   <footer class="bg-gray-800 text-white py-6">
     <div class="container mx-auto text-center">
       <p>&copy; 2025 Jesé Villatoro. Todos los derechos reservados.</p>
     </div>
   </footer>
-  
+
   <!-- Archivo JavaScript -->
-  <script src="script.js"></script>
+  <script>
+    function toggleDetails(id) {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('hidden');
+    }
+  </script>
 </body>
 </html>
